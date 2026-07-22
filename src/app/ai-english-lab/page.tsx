@@ -1,0 +1,4 @@
+import { AILabBand, PageHero } from "@/components/sections";
+import { labFeatures } from "@/data/site";
+export const metadata = { title: "AI English Lab", description: "Future AI-powered English practice for speaking, pronunciation, and fluency tracking." };
+export default function AILab(){return <main><PageHero eyebrow="Coming future product" title="AI-powered English practice that feels personal" text="A futuristic learning lab designed to give students more speaking time, smarter feedback, and measurable fluency progress."/><AILabBand/><section className="px-5 py-20"><div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-4">{labFeatures.map(f=>{const Icon=f.icon;return <div className="rounded-[2rem] border bg-white p-7 shadow-lg" key={f.title}><Icon className="text-blue-900"/><h2 className="mt-5 text-xl font-black">{f.title}</h2><p className="mt-3 text-slate-600">{f.text}</p></div>})}</div></section></main>}
